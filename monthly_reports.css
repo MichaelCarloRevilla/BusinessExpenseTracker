@@ -1,0 +1,118 @@
+
+.contain-table{
+    margin-top: 10px;
+    background-color: #253832;
+    padding: 20px;
+    border-radius: 20px;
+}
+.main-content h1, .main-content h2, .contain-table p{
+    color: #f8f6f1;
+}
+.contain-table p{
+    background-color: #3d5e53;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+table{
+    border: 1px solid #f8f6f1;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #f8f6f1;
+}
+td{
+    word-break: break-all;
+    border: #f8f6f1 1px solid;
+    padding: 10px;
+}
+#butt{
+    background-color: #f8f6f100;
+    color: #f8f6f1;
+    border: 1px solid #f8f6f1;
+    border-radius: 10px;
+    padding: 10px;
+}
+#butt:hover{
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    background-color: #f8f6f1;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.canvas-container {
+    margin: 10px;
+}
+
+#barChart {
+    width: 300px; 
+    height: 500px;
+}
+#donutChart{
+    width: 300px; 
+    height: 300px;
+}
+
+@media print{
+    .main-content {
+        margin-left: 0px;
+        width: calc(100% - 0px);
+    }
+    .navigation, #butt{
+        display: none;
+    }
+
+    .contain-table table{
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        
+        margin-top: 10px;
+        background-color: #6b9b8a !important;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .main-content h1, .main-content h2{
+        
+        color: black;
+    }
+    #print-this table{
+        
+        width: 700px;
+    }
+    td, th {
+        color: #f8f6f1;
+    }
+    td{
+        -web-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: #80ad9e !important;
+        border: #6b9b8a 2px solid;
+    }
+    .charts h2{
+        color: black;
+    }
+    #barChart{
+        border: #253832 2px solid;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    #monthlyExpensesChart{
+        border: #253832 2px solid;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #butt{
+        width: 100%;
+    }
+}

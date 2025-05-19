@@ -1,0 +1,93 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg1 {
+    background-image: url("green-boxes.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+.overlay {
+    background-color: rgba(17, 17, 17, 0.657);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+}
+
+.container {
+    flex-direction: column;
+    border: 2px solid #f8f6f1;
+    border-radius: 20px;
+    padding: 20px 70px;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;   
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+}
+
+.container a {
+    font-size: medium;
+    text-decoration: none;
+    color:#f8f6f1;
+}
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container p {
+    color: #b8b8b8;
+}
+
+.container h2 {
+    font-size: xx-large;
+    color: #f8f6f1;
+}
+
+input[type="text"],
+input[type="password"], input[type="email"], button[type="submit"] {
+    width: 100%;
+    font-size: medium;
+    background-color: rgba(245, 245, 245, 0.221);
+    border: 1px solid #f8f6f1;
+    color: #f8f6f1;
+}
+
+button[type="submit"]:hover{
+    background-color: #f8f6f1;
+}
+
+button[type="submit"] {
+    background-color: rgba(245, 245, 245, 0.459);
+    border: 1px solid #f8f6f1;
+    width: 104%;
+    color: #f8f6f1;
+}
+
+input:focus, input:active {
+    border-radius: 20px;
+    border: #f8f6f1 1px solid;
+}
+button:hover{
+    border-radius: 20px;
+    border: #f8f6f1 1px solid;
+    color: black;
+}
+input, button {
+    transition: border-radius 0.5s ease;
+}

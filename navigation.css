@@ -1,0 +1,136 @@
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.navigation {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    height: 100%;
+    width: 300px;
+    font-size: medium;
+    background-color: #2525252b;
+    backdrop-filter: blur(5px);
+    border: 2px solid #f8f6f1;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    z-index: 1000;
+    overflow-y: auto;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#nav-toggle:checked ~ .wrapper .navigation {
+    transform: translateX(0);
+}
+
+.nav-toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.356);
+    backdrop-filter: blur(2px);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+.nav-toggle-btn img{
+    size-adjust: 100%;
+    width: 20px;
+    filter: invert(100%);
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.navigation h1 {
+    color: #f8f6f1;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #f8f6f1;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navigation li {
+    margin-bottom: 0;
+    padding: 3px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navigation li:hover,
+.navigation li:hover a,
+.navigation li.active,
+.navigation li.active a {
+    background-color: rgb(63, 63, 63);
+    color: #f8f6f1;
+}
+.navigation li:nth-last-child(1) {
+    margin-bottom: 10px;
+}
+
+.welcome {
+    font-size: 30px;
+    color: #000;
+    pointer-events: none;
+}
+
+.navigation img {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 2px;
+    pointer-events: none;
+    filter: invert(100%);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #252525;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+@media (min-width: 740px) {
+    .navigation {
+        transform: translateX(0);
+    }
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+    }
+}

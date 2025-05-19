@@ -1,0 +1,97 @@
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-content h1{
+    color: #f8f6f1;
+    text-align: left;
+    font-size: xx-large;
+    padding-left: 10px;
+}
+
+.avalable-money-left h3, .avalable-money-left p{
+    color: #f8f6f1;
+    text-align: left;
+}
+.avalable-money-left p{
+    font-size: x-large;
+}
+.avalable-money-left{
+    background-color: #3d5e53;
+    background: linear-gradient(to right, #3d5e53, #253832);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.avalable-money-left:hover{
+    background-color: #345047;
+    background: linear-gradient(to right, #345047, #253832);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: #f8f6f1;
+    justify-content: space-between;
+    gap: 20px;
+}
+.charts, .recent-activity {
+    flex: 1;
+}
+
+#donutChart {
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 340px;
+    height: 100%;
+    max-height: 500px;
+}
+.charts{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.charts h2{
+    color: #f8f6f1;
+}
+
+.recent-activity{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+.recent-activity h2{
+    color: #f8f6f1;
+}
+.recent-activity a{
+    text-decoration: none;
+    color: #f8f6f1;
+    font-size: medium;
+    text-align: left;
+}
+.recent-activity a:hover{
+    text-decoration: underline;
+}
+.recent-activity h2, .recent-activity a{
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.recent-activity li{
+    list-style-type: none;
+    margin-bottom: 10px;
+    background-color: #345047;
+    padding: 20px;
+    border-radius: 10px;
+}
+.recent-activity li:hover{
+    background-color: #2b423a;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+

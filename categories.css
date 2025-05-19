@@ -1,0 +1,115 @@
+.top-container {
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #253832;
+}
+.top-container h1{
+    color: #f8f6f1;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.categories-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+    
+}
+.categories-container li{
+    list-style-type: none;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #3d5e53;
+    color: #f8f6f1;
+    transition: background-color 0.3s ease-in-out;
+
+    width: 200px;
+    height: 100%;
+    max-height: 300px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+.categories-container li::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.categories-container li:hover{
+    background-color: #1e2b26;
+}
+
+.submit-category1 button{
+    background-color: #f8f6f100;
+    border: 1px solid #f8f6f1;
+    color: #f8f6f1;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.submit-category1 button:hover{
+    background-color: #f8f6f1;
+    color: #253832;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.submit-category2 {
+    background-color: #2538326e;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid #f8f6f1;
+    padding: 20px;
+    margin-top: 60px;
+}
+.submit-category2 label{
+    color: #f8f6f1;
+    font-size: larger;
+    margin-bottom: 5px;
+}
+.submit-category2 input[type="text"]{
+    height: 40%;
+    font-size: medium;
+    color: #f8f6f1;
+}
+.submit-category2 button, .submit-category2 input{
+    background-color: #f8f6f100;
+    border: 1px solid #f8f6f1;
+    border-radius: 5px;
+    color: #f8f6f1;
+    font-size: larger;
+}
+.submit-category2 button:hover, .submit-category2 input:hover{
+    background-color: #f8f6f182;
+    color: #f8f6f1;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* delete button in category */
+#butn{
+    background-color: #f8f6f100;
+    border: 1px solid #f8f6f1;
+    color: #f8f6f1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#butn:hover{
+    background-color: #f8f6f1;
+    color: #253832;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .categories-container{
+        flex-direction: row;
+    }
+    .submit-category1 button{
+        width: 100%;
+    }
+    .submit-category2{
+        width: fit-content;
+    }
+}
